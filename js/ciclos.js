@@ -7,27 +7,46 @@ alert("HOLA " + nombre);
 
 let operacion = prompt(`ESCRIBE LA OP DESEADA: 
 POTENCIA
-RAIZ`);
+RAIZ
+TERMINAR`);
 
-operacion = operacion.toUpperCase();
+operacion = operacion.toUpperCase(); 
 
-if(operacion==="POTENCIA"  || operacion ==="RAIZ")
-    {
-        let base = Number(prompt("INGRESE EL NUMERO BASE"));                     
-        let exponente = Number(prompt("INGRESE EL EXPONENTE")); 
+    while(operacion!=="TERMINAR");     
+    {   
+        let operacion = prompt(`ESCRIBE LA OP DESEADA: 
+        POTENCIA
+        RAIZ
+        TERMINAR`);
+        operacion = operacion.toUpperCase();  
 
-        if(isNaN(base) || isNaN(exponente))
-        {
+        if(operacion!=="POTENCIA" &&
+           operacion!=="RAIZ" &&
+           operacion!=="TERMINAR")
+           {
+               alert("OPCION INVALIDA")
+           }
+
+        if(operacion ==="POTENCIA"  || operacion ==="RAIZ");
+            {
+            let base = Number (prompt ("INGRESE EL NUMERO BASE"));           
+            let exponente = Number (prompt ("INGRESE EL EXPONENTE"))
+                
+            if(isNaN(base) || isNaN(exponente))
+            {
             alert("INGRESE SOLO NUMEROS")
-        }
-        
-        else
-        {
+            }
+            else 
+            {
             if(operacion === "POTENCIA")
             {
-                alert(Math.pow(base, exponente));
+                alert(Math.pow(base, exponente))
             }
             else if(operacion === "RAIZ")
             {
-                 alert(Math.pow(base , 1/exponente);
+                alert(Math.pow(base, exponente))
             }
+
+        }
+    }
+    }         
